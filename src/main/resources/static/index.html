@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+        <![endif]-->
+<!--[if IE 7]>
+        <html class="no-js lt-ie9 lt-ie8" lang="">
+                <![endif]-->
+<!--[if IE 8]>
+                <html class="no-js lt-ie9" lang="">
+                        <![endif]-->
+<!--[if gt IE 8]>
+                        <!-->
+<html class="no-js" lang="">
+<!--
+                                
+                                
+                                
+                                <![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Real Public Library</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/fontAwesome.css">
+<link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="stylesheet" href="style.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="./script.js"></script>
+<script lang="javascript" src="xlsx.full.min.js"></script>
+</head>
+<body>
+	<div class="overlay"></div>
+
+	<section class="cd-hero">
+		<div class="cd-slider-nav">
+			<nav>
+				<ul>
+					<li class="selected"><a href="#0">
+							<div class="image-icon">
+								<img src="img/home-icon.png" alt="home-icon">
+							</div>
+							<h6>Welcome</h6>
+					</a></li>
+					<li><a href="#0">
+							<div class="image-icon">
+								<img src="img/projects-icon.png" alt="projects-icon">
+							</div>
+							<h6>Book</h6>
+					</a></li>
+					<li><a href="#0">
+							<div class="image-icon">
+								<img src="img/projects-icon.png" alt="projects-icon">
+							</div>
+							<h6>Room</h6>
+					</a></li>
+					<li><a href="#0">
+							<div class="image-icon">
+								<img src="img/about-icon.png" alt="about-icon">
+							</div>
+							<h6>Events</h6>
+					</a></li>
+
+					<li><a href="#0">
+							<div class="image-icon">
+								<img src="img/about-icon.png" alt="contact-icon">
+							</div>
+							<h6>Popularity</h6>
+					</a></li>
+
+
+					<li><a href="#0">
+							<div class="image-icon">
+								<img src="img/contact-icon.png" alt="contact-icon">
+							</div>
+							<h6>About Us</h6>
+					</a></li>
+					<li>
+						<button id="logout" class="image-icon" onclick="exit()">
+							<img src="img/logout.png" alt="logout">
+						</button>
+						<h6>Logout</h6>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- .cd-slider-nav -->
+		<ul class="cd-hero-slider">
+			<li class="selected">
+				<div class="heading">
+					<!-- <h1>Real Public Library</h1> -->
+				</div>
+				<div class="cd-full-width first-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content first-content">
+									<h4>About Real Public Library</h4>
+									<p>Real public library is a library that is accessible by
+										the general public and is usually funded from public sources,
+										such as taxes. It is operated by librarians and library
+										paraprofessionals, who are also civil servants. There are five
+										fundamental characteristics shared by public libraries: they
+										are generally supported by taxes (usually local, though any
+										level of government can and may contribute); they are governed
+										by a board to serve the public interest; they are open to all,
+										and every community member can access the collection; they are
+										entirely voluntary, no one is ever forced to use the services
+										provided and they provide library and information services
+										services without charge. Public libraries exist in many
+										countries across the world and are often considered an
+										essential part of having an educated and literate population.
+										Public libraries are distinct from research libraries, school
+										libraries, academic libraries and other special libraries.
+										Their mandate is to serve the general public's information
+										needs rather than the needs of a particular school,
+										institution, or research population. Public libraries also
+										provide free services such as preschool story times to
+										encourage early literacy among children. They also provide a
+										quiet study and learning areas for students and professionals
+										and foster the formation of book clubs to encourage the
+										appreciation of literature by the young and adults. Public
+										libraries typically allow users to borrow books and other
+										materials outside the library premises temporarily, usually
+										for a given period of time. They also have non-circulating
+										reference collections and provide computer and Internet access
+										to their patrons.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="heading"></div>
+				<div class="cd-half-width third-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content third-content">
+									<div>
+										<div id="customerdetails"></div>
+										<div id="rentaldetails">
+											<!-- <div align="center" style="padding:12px" class="primary-button">
+                      		<button class="tablinks" type="button" id="getcustomerdetails" onclick="getCustomers('ROOM')">Reservation History</button>
+                      	</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+			<li>
+				<div class="heading"></div>
+				<div class="cd-half-width third-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content third-content">
+									<div align="center" style="padding: 12px"
+										class="primary-button" id="roomSeachdiv">
+										<label for="reservationDate">Select Date:</label> &nbsp;&nbsp;
+										<input type="date" id="reservationDate" name="reservationDate">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<label for="numOfPeople">Select Number of People:</label>
+										&nbsp;&nbsp; <select id="numOfPeople">
+											<option value="">-- Select --</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+										</select>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<button class="tablinks" type="button" id="roomavailable"
+											onclick="getRoomAvailability()">Check Availability</button>
+									</div>
+									<div class="row" id="roomavailabilitydiv">
+										<div align="center" style="padding: 12px"
+											class="primary-button">
+											<button class="tablinks" type="button"
+												id="getRoomAvailability"
+												onclick="getBookedRoomDetails('CUS')">Reservation
+												History</button>
+										</div>
+
+										<!-- please do not uncomment the below tag -->
+										<!-- <div>
+
+                      <div id="roomCombinedDetails"></div>
+                      
+                    </div> -->
+									</div>
+									<div id="roomCombinedDetails"></div>
+									<div id="customerdetails2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="heading"></div>
+				<div class="cd-half-width third-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content third-content">
+									<div class="row">
+										<div align="center" style="padding: 12px;"
+											class="primary-button">
+											<button class="tablinks" type="button" id="getexhibition"
+												onclick="getFutureEvents()">Future Events</button>
+											&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+											<button class="tablinks" type="button" id="bookExhibition"
+												onclick="getCustExhibition()">Events History</button>
+										</div>
+										<div>
+											<div id="getExhibitionCombinedDetails"></div>
+											<div id="seminarsponsorsdetails"></div>
+											<div id="authordetails"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			
+			
+						<li>
+				<div class="heading"></div>
+				<div class="cd-half-width third-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content third-content">
+									<div class="row">
+										<div align="center" style="padding: 12px;"
+											class="primary-button">
+											<button class="tablinks" type="button" id="getPopularBooks" onclick="getPopularBooks()" >Top 5 Book</button>
+											&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+											<button class="tablinks" type="button" id="getPopularBookGenre" onclick="getPopularBookGenre()" >Top 5 Genre</button>
+										</div>
+										<div>
+											<div id="myChart"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			
+			
+			
+			
+			<li>
+				<div class="heading"></div>
+				<div class="cd-half-width second-slide">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="content second-content">
+									<div class="row">
+										<div class="col-md-7 left-image" style="width:50%;height:50%">
+											<img src="img/mugdha.jpeg" alt="left-about-image"  style="width:50%;height:50%">
+										</div>
+										<div class="col-md-5">
+											<div style="text-align: centre;">
+												<p>
+													<br> <br> <br>Mugdha Hemant Rane<br>
+													mhr8596@nyu.edu<br> Masters In Computer Engineering<br>
+												</p>
+												<div class="primary-button">
+													<a href="https://www.linkedin.com/in/mugdharane/"
+														target="_blank">Discover More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-7">
+											<div style="text-align: centre;">
+												<p>
+													<br> <br> <br> Vinay Kumar Hanumanthappa<br>
+													vh2115@nyu.edu<br> Masters In Computer Engineering<br>
+												</p>
+												<div class="primary-button">
+													<a href="https://www.linkedin.com/in/vinaykumarh/"
+														target="_blank">Discover More</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-5 right-image" >
+											<img src="img/Vinay.jpg" alt="right-about-image"   style="width:50%;height:50%">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-7 left-image" style="width:50%;height:50%">
+											<img src=img/sowmith.jpg alt="left-about-image"   style="width:50%;height:50%" >
+										</div>
+										<div class="col-md-5">
+											<div style="text-align: centre;">
+												<p>
+													<br> <br> <br> Sowmith Saridena<br>
+													ss14401@nyu.edu<br> Masters In Computer Engineering<br>
+												</p>
+												<div class="primary-button">
+													<a href="https://www.linkedin.com/in/sowmithsaridena/"
+														target="_blank">Discover More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<!-- .cd-hero-slider -->
+	</section>
+	<!-- .cd-hero -->
+	<footer>
+		<p>Copyright © 2022 Real Public Library</p>
+	</footer>
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write(' < script src = "js/vendor/jquery-1.11.2.min.js" >< \/script>')
+	</script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var now = new Date();
+			var date = new Date();
+			date.setDate(date.getDate() + 30);
+			var maxDate = date.toISOString().split('T')[0];
+			minDate = now.toISOString().substring(0, 10);
+			$("#reservationDate").attr('min', minDate);
+			$("#reservationDate").attr('Max', maxDate);
+		});
+	</script>
+</body>
+</html>

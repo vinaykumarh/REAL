@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Real Public Library</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!-- <script src="./script.js"></script> -->
+        <script lang="javascript" src="xlsx.full.min.js"></script>
+        <style>
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #ffbb05;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.form {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] , input[type=tel]{
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus , input[type=tel]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+</style>
+    </head>
+
+    <body>
+        <div class="overlay"></div>
+
+        <section class="cd-hero">
+            <div class="cd-slider-nav">
+                <nav> <span class="cd-marker item-1"></span>
+                    <ul></ul>
+                </nav>
+            </div>
+            <!-- .cd-slider-nav -->
+            <ul class="cd-hero-slider">
+                <li class="selected">
+                    <div class="heading">
+                        <h1>Real Public Library</h1> <span>Please Register to access the application</span> </div>
+                        <br/>
+                        <br/>
+                    <div class="cd-full-width first-slide">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="content first-content">
+                                        <section class='login' id='login'>
+                                            <p class='msg'>Welcome to Real Public Library</p>
+                                            <br/>
+                                            <div class='form'>
+                                                <form>
+                                                <div>
+                                                	<label for="reg_fname">First Name</label>
+                                                    <input type="text"  class='text' id='reg_fname' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_lname">Last Name</label>
+                                                    <input type="text"  class='text' id='reg_lname' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_phone">Phone</label>
+                                                    <input type="tel"  class='text' id='reg_phone' pattern="[0-9]{10}" required>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div>
+                                                    
+                                                    <label for="reg_email">E-mail</label>
+                                                   <input type="text"  class='text' id='reg_email' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_street">Street</label>
+                                                    <input type="text"  class='text' id='reg_street' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_state">State</label>
+                                                    <input type="text"  class='text' id='reg_state' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_zipcode">ZipCode</label>
+                                                    <input type="text"  class='text' id='reg_zipcode' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    
+                                                    <label for="reg_idtype">Select ID Type:</label>
+								                    &nbsp;&nbsp;
+								                    <select id="reg_idtype">
+								                      <option value="">
+								                        -- Select --
+								                      </option>
+								                      <option value="STATE_ID">
+								                        STATE_ID
+								                      </option>
+								                      <option value="PASSPORT">
+								                        PASSPORT
+								                      </option>
+								                      <option value="DRIVER_ID">
+								                        DRIVER_ID
+								                      </option>
+								                      
+								                    </select>
+								                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_idnumber">ID Number</label>
+                                                    <input type="text"  class='text' id='reg_idnumber' required>
+                                                    </div>
+                                                    
+                                                    <div>
+                                                    <label for="reg_password">Password</label>
+                                                    <input type="password" placeholder='••••••••••••••' id="reg_password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                                    </div>
+                                                    
+                                                    
+                                                    <br />
+                                                    
+                                                    <div class="primary-button"> <a href="#" class='btn-login' id='do-reguser' onclick="reguser()">Register</a> </div>
+                                                </form>
+                                            </div>
+                                            
+                                         <div id="message">
+												  <h3>Password must contain the following:</h3>
+												  <p id="letter" class="invalid"><b>A lowercase letter</b></p>
+												  <p id="capital" class="invalid"><b>A capital (uppercase) letter</b></p>
+												  <p id="number" class="invalid"><b>A number</b></p>
+												  <p id="length" class="invalid"><b>Minimum 8 characters</b></p>
+												</div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            <!-- .cd-hero-slider -->
+        </section>
+        <!-- .cd-hero -->
+        <footer>
+            <p>Copyright &copy; 2020 Your Company | Designed by <em>Template Mo</em> </p>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write(' < script src = "js/vendor/jquery-1.11.2.min.js" > < \/script>')
+        </script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!-- partial -->
+        <script src="./script.js"></script>
+        <script type="text/javascript">// Execute a function when the user presses a key on the keyboard
+        reg_password.addEventListener("keypress", function(event) {
+        	  // If the user presses the "Enter" key on the keyboard
+        	  if (event.key === "Enter") {
+        	    // Cancel the default action, if needed
+        	    event.preventDefault();
+        	    // Trigger the button element with a click
+        	    document.getElementById("do-reguser").click();
+        	  }
+        	});</script>
+        	
+        	<script>
+var myInput = document.getElementById("reg_password");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+        	
+    </body>
+
+</html>

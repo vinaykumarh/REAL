@@ -1,0 +1,84 @@
+
+
+.respondents{
+	width:100%;
+	border-collapse: collapse;
+	border:1px solid #ddd;
+}
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.myInput {
+  background-image: url('../img/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.myTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #ddd;
+  
+}
+.myTable th {
+  text-align: centre;
+  padding: 12px;
+  font-size: 16px;
+  position: sticky;
+  top: 0;
+}
+.myTable td {
+  text-align: centre;
+  padding: 12px;
+  font-size: 13px;
+  color:#5a5a5a;
+}
+
+.myTable tr {
+  border-bottom: 1px solid #ddd;
+  color:#5a5a5a;
+  
+}
+
+.myTable tr.header, #myTable tr:hover {
+      background-color: #ffbb05;
+    color: #000000;
+}
+
+.primary-button:hover {
+    background-color: #fff;
+	
+}
+
+.filter {
+  position: absolute;
+  width: 20vw;
+  height: 30vh;
+  display: none;
+  text-align: left;
+  font-size: small;
+  z-index: 9999;
+  overflow: auto;
+  background: #ffffff;
+  color: #1f2d54;
+  border: 1px solid #dddddd;
+}
+
+.filter input {
+  margin: 5px !important;
+  padding: 0 !important;
+  width: 10%;
+}
